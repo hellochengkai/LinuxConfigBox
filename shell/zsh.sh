@@ -77,4 +77,3 @@ set_zsh()
 
 # set_zplug
 set_zsh
-source $LinuxConfigBoxPath/shell/common.sh
