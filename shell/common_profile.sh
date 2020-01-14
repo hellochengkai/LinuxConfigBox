@@ -17,9 +17,15 @@ set_alias()
     alias em='emacs -nw' 
 }
 
-
-ipaddr=`ifconfig wlo1|grep inet|grep -v 127.0.0.1|grep -v inet6 | awk '{print $2}' | tr -d "addr:"`
+set_ipaddr()
+{
+    export ipaddr=`ifconfig $1|grep inet|grep -v 127.0.0.1|grep -v inet6 | awk '{print $2}' | tr -d "addr:"`
+}
 
 set_alias
+
+set_ipaddr wlo1
+
+export PATH=$HOME/bin:$PATH
 # set_fzf
 # set_autojump
