@@ -8,7 +8,7 @@ set_fzf()
     if [[  $SHELL == "/bin/bash"  ]];then
         [ -f ~/.fzf.bash ] && source ~/.fzf.bash
     fi
-    
+
     if [[  $SHELL == "/bin/zsh"  ]];then
         [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
     fi

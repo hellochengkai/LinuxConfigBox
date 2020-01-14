@@ -41,6 +41,6 @@ run_shell(){
 add_path()
 {
     if [[ -d $1 ]];then
-       export PATH="$1:$PATH"
+        export PATH="$1:$PATH"
     fi
 }

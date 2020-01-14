@@ -37,7 +37,7 @@ zsh_config(){
 # common_config
 profile_config
 bash_config
-zsh_config 
+zsh_config
 
 
 run_shell $PWD/tools/installTools.sh
