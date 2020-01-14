@@ -7,11 +7,11 @@ install()
     if [[  $? == 0  ]];then
         return
     fi
-    if [[  ! -d $PWD/autojump  ]];then
-        git clone git://github.com/wting/autojump.git $PWD/autojump 
-        cd autojump
-        ./install.py -d ../OUT
-        cd ..
+    if [[  ! -d $HOME/.autojump  ]];then
+        git clone git://github.com/wting/autojump.git /tmp/autojump
+        cd /tmp/autojump
+        ./install.py
+        cd -
     fi
     return
 }

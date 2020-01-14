@@ -3,7 +3,15 @@
 
 install()
 {
-    # copy_file $PWD/config/gitconfig $HOME/.gitconfig
+    cmd_list=(
+        git
+        tig)
+
+    for i in ${cmd_list[@]}; do
+        install_cmd $i
+    done
+    
+    copy_file $PWD/gitconfig $HOME/.gitconfig
     return
 }
 

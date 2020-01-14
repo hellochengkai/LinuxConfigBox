@@ -3,7 +3,7 @@
 
 install()
 {
-    # copy_file $PWD/config/tmux.conf $HOME/.tmux.conf
+    install_cmd tmux
     return
 }
 

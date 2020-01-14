@@ -3,7 +3,7 @@
 
 config()
 {
-    add_path $LinuxConfigBoxPath/tools/shellcheck/shellcheck-stable/
+    # add_path $LinuxConfigBoxPath/tools/shellcheck/shellcheck-stable/
     return
 }
 

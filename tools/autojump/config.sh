@@ -4,15 +4,7 @@
 
 config()
 {
-    add_path "$LinuxConfigBoxPath/tools/autojump/OUT/bin"
-    alias j='autojump'  
-    # if [[  $SHELL == "/bin/bash"  ]];then
-    #     run_shell "$LinuxConfigBoxPath/tools/autojump/OUT/share/autojump/autojump.bash"
-    # fi
-    
-    # if [[  $SHELL == "/bin/zsh"  ]];then
-    #     run_shell "$LinuxConfigBoxPath/tools/autojump/OUT/share/autojump/autojump.zsh"
-    # fi
+    run_shell "$HOME/.autojump/etc/profile.d/autojump.sh"
 }
 
 config

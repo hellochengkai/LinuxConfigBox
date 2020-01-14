@@ -1,5 +1,4 @@
 #!/bin/bash
-. $LinuxConfigBoxPath/shell/tools.sh
 set_alias()
 {
     alias egrep='egrep --color=auto'
@@ -27,5 +26,3 @@ set_alias
 set_ipaddr wlo1
 
 export PATH=$HOME/bin:$PATH
-# set_fzf
-# set_autojump
