@@ -3,6 +3,7 @@
 
 profile_config(){
     write_line "#add by ck" "$HOME/.profile"
+    write_line "export ifdev=wlo1" "$HOME/.profile"
     write_line "export LinuxConfigBoxPath=$PWD" "$HOME/.profile"
     write_line 'source $LinuxConfigBoxPath/shell/common_profile.sh' "$HOME/.profile"
     write_line 'source $LinuxConfigBoxPath/tools/configTools.sh' "$HOME/.profile"
@@ -28,7 +29,7 @@ zsh_config(){
     return
 }
 
-export LinuxConfigBoxPath=`$PWD`
+export LinuxConfigBoxPath="$PWD"
 profile_config
 bash_config
 zsh_config

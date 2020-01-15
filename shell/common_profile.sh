@@ -23,6 +23,6 @@ set_ipaddr()
 
 set_alias
 
-set_ipaddr enp3s0
+set_ipaddr $ifdev
 
 export PATH=$HOME/bin:$PATH
