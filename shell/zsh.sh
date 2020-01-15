@@ -76,4 +76,7 @@ set_zsh()
 }
 
 # set_zplug
+source $LinuxConfigBoxPath/shell/common.sh
 set_zsh
+export SHELL=/bin/zsh
+source $LinuxConfigBoxPath/tools/configTools.sh

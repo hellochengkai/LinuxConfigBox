@@ -6,4 +6,7 @@ set_PS1()
     export PS1='\[\e[31m\]\[\e[32m\]\u@$ipaddr\[\e[30m\]:\[\e[34m\]\w\[\e[37m\]\n\A\[\e[35m\]\$ \[\e[37m\]'
 }
 
+source $LinuxConfigBoxPath/shell/common.sh
 set_PS1
+export SHELL=/bin/bash
+source $LinuxConfigBoxPath/tools/configTools.sh
