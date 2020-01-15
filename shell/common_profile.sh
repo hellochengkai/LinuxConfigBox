@@ -13,7 +13,7 @@ set_alias()
     alias reboot='echo null'
     alias reboot_X='reboot'
     alias cdb='cd ../'
-    alias em='emacs -nw' 
+    alias em='emacs -nw'
 }
 
 set_ipaddr()
@@ -23,6 +23,6 @@ set_ipaddr()
 
 set_alias
 
-set_ipaddr wlo1
+set_ipaddr enp3s0
 
 export PATH=$HOME/bin:$PATH
