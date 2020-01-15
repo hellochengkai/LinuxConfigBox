@@ -9,7 +9,7 @@ config_tools()
             if [[  -x $i  ]];then
                 chmod +x "$i"
             fi
-            echo "config $i"
+            # echo "config $i"
             run_shell_cd "$i"
         fi
     done

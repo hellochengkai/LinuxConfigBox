@@ -28,14 +28,7 @@ zsh_config(){
     return
 }
 
-# common_config()
-# {
-#     copy_file $PWD/config/gitconfig $HOME/.gitconfig
-#     copy_file $PWD/config/tmux.conf $HOME/.tmux.conf
-#     copy_file $PWD/config/bira_ck.zsh-theme $HOME/.oh-my-zsh/themes/bira_ck.zsh-theme
-# }
-# common_config
-export LinuxConfigBoxPath=$PWD
+export LinuxConfigBoxPath=`$PWD`
 profile_config
 bash_config
 zsh_config
