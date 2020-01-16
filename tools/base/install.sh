@@ -4,14 +4,18 @@
 install()
 {
     # 可以加入想要安装的软件
-    # cmd_list=(
-    #     htop
-    #     tree
-    #     zsh)
+    cmd_list=(
+        neofetch
+        wget
+        curl
+        zsh
+        ctags
+        cscope
+        clang)
 
-    # for i in ${cmd_list[@]}; do
-    #     install_cmd $i
-    # done
+    for i in ${cmd_list[@]}; do
+        install_cmd $i
+    done
     return
 }
 
