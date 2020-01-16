@@ -16,4 +16,4 @@ export LinuxConfigBoxPath="$PWD"
 write_config bash
 write_config zsh
 
-# run_shell $PWD/tools/installTools.sh
+run_shell $PWD/tools/installTools.sh

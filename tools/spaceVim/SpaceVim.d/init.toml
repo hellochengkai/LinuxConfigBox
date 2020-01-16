@@ -1,0 +1,265 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "nil"
+    statusline_inactive_separator = "bar"
+    buffer_index_type = 0
+    windows_index_type = 0
+    enable_tabline_filetype_icon = false
+    enable_statusline_mode = false
+    statusline_unicode_symbols = false
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+    automatic_update = true
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto-completion-return-key-behavior = "complete"
+auto-completion-tab-key-behavior = "cycle"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "c",
+    "cpp"
+  ]
+  [layers.override_cmd]
+    c = ["clangd"]
+
+## -- SpaceVim layer list start
+[[layers]]
+  name = "VersionControl"
+
+[[layers]]
+  name = "autocomplete"
+
+[[layers]]
+  name = "chat"
+
+[[layers]]
+  name = "checkers"
+
+[[layers]]
+  name = "chinese"
+
+[[layers]]
+  name = "colorscheme"
+
+[[layers]]
+  name = "core#banner"
+
+[[layers]]
+  name = "core#statusline"
+
+[[layers]]
+  name = "core#tabline"
+
+[[layers]]
+  name = "core"
+
+[[layers]]
+  name = "cscope"
+
+[[layers]]
+  name = "ctrlp"
+
+[[layers]]
+  name = "debug"
+
+[[layers]]
+  name = "default"
+
+[[layers]]
+  name = "denite"
+
+[[layers]]
+  name = "edit"
+
+[[layers]]
+  name = "floobits"
+
+[[layers]]
+  name = "format"
+
+[[layers]]
+  name = "fzf"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
+  name = "github"
+
+[[layers]]
+  name = "japanese"
+
+[[layers]]
+  name = "lang#WebAssembly"
+
+[[layers]]
+  name = "lang#agda"
+
+[[layers]]
+  name = "lang#asciidoc"
+
+[[layers]]
+  name = "lang#autohotkey"
+
+[[layers]]
+  name = "lang#c"
+
+[[layers]]
+  name = "lang#clojure"
+
+[[layers]]
+  name = "lang#csharp"
+
+[[layers]]
+  name = "lang#dart"
+
+[[layers]]
+  name = "lang#dockerfile"
+
+[[layers]]
+  name = "lang#elixir"
+
+[[layers]]
+  name = "lang#elm"
+
+[[layers]]
+  name = "lang#erlang"
+
+[[layers]]
+  name = "lang#extra"
+
+[[layers]]
+  name = "lang#fsharp"
+
+[[layers]]
+  name = "lang#go"
+
+[[layers]]
+  name = "lang#haskell"
+
+[[layers]]
+  name = "lang#html"
+
+[[layers]]
+  name = "lang#java"
+
+[[layers]]
+  name = "lang#javascript"
+
+[[layers]]
+  name = "lang#julia"
+
+[[layers]]
+  name = "lang#kotlin"
+
+[[layers]]
+  name = "lang#latex"
+
+[[layers]]
+  name = "lang#lisp"
+
+[[layers]]
+  name = "lang#lua"
+
+[[layers]]
+  name = "lang#markdown"
+
+[[layers]]
+  name = "lang#nim"
+
+[[layers]]
+  name = "lang#ocaml"
+
+[[layers]]
+  name = "lang#perl"
+
+[[layers]]
+  name = "lang#php"
+
+[[layers]]
+  name = "lang#plantuml"
+
+[[layers]]
+  name = "lang#puppet"
+
+[[layers]]
+  name = "lang#purescript"
+
+[[layers]]
+  name = "lang#python"
+
+[[layers]]
+  name = "lang#ruby"
+
+[[layers]]
+  name = "lang#rust"
+
+[[layers]]
+  name = "lang#scala"
+
+[[layers]]
+  name = "lang#sh"
+
+[[layers]]
+  name = "lang#swift"
+
+[[layers]]
+  name = "lang#typescript"
+
+[[layers]]
+  name = "lang#vim"
+
+[[layers]]
+  name = "lang#vue"
+
+[[layers]]
+  name = "leaderf"
+
+[[layers]]
+  name = "shell"
+
+[[layers]]
+  name = "sudo"
+
+[[layers]]
+  name = "tags"
+
+[[layers]]
+  name = "tmux"
+
+[[layers]]
+  name = "tools#dash"
+
+[[layers]]
+  name = "tools"
+
+[[layers]]
+  name = "ui"
+
+## -- SpaceVim layer list end
