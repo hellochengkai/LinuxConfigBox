@@ -5,7 +5,13 @@ install()
 {
     cmd_list=(
         vim
-        neovim)
+        neovim
+        ctags
+        # vim-scripts
+        # python-neovim
+        # python3-neovim
+        cscope
+        clang)
 
     for i in ${cmd_list[@]}; do
         install_cmd $i
