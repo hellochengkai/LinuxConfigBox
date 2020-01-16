@@ -3,7 +3,7 @@
 
 install()
 {
-    which autojump
+    which autojump > /dev/null
     if [[  $? == 0  ]];then
         return
     fi

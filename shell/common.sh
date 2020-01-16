@@ -1,19 +1,21 @@
 #!/bin/bash
+. $LinuxConfigBoxPath/func/func.sh
+
 set_alias()
 {
-    alias egrep='egrep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias grep='grep --color=auto'
-    alias l='ls -CF'
-    alias la='ls -AF'
-    alias ll='ls -alh'
-    alias ls='ls --color=auto'
-    alias cman='man -M /usr/share/man/zh_CN'
-    alias rm='trash-put'
-    alias reboot='echo null'
-    alias reboot_X='reboot'
-    alias cdb='cd ../'
-    alias em='emacs -nw'
+    alias_cmd 'egrep' 'egrep --color=auto'
+    alias_cmd 'fgrep' 'fgrep --color=auto'
+    alias_cmd 'grep' 'grep --color=auto'
+    alias_cmd 'l' 'ls -CF'
+    alias_cmd 'la' 'ls -AF'
+    alias_cmd 'll' 'ls -alh'
+    alias_cmd 'ls' 'ls --color=auto'
+    alias_cmd 'cman' 'man -M /usr/share/man/zh_CN'
+    alias_cmd 'rm' 'trash-put'
+    alias_cmd 'reboot' 'echo null'
+    alias_cmd 'reboot_X' 'reboot'
+    alias_cmd 'cdb' 'cd ../'
+    alias_cmd 'em' 'emacs -nw'
 }
 
 set_ipaddr()

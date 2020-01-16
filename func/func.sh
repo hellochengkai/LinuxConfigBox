@@ -19,7 +19,7 @@ copy_file()
 
 install_cmd()
 {
-    which $1
+    which $1 > /dev/null
     if [[  $? != 0  ]];then
         sudo apt-get install $1
     fi
@@ -42,5 +42,24 @@ add_path()
 {
     if [[ -d $1 ]];then
         export PATH="$1:$PATH"
+    fi
+}
+
+alias_cmd()
+{
+    #空格分割字符串 参考 string="hello,shell,split,test";array=(${string//,/ })
+    array=(${2// / })
+    # echo ${array[0]}
+
+    which ${array[0]} > /dev/null
+    if [[  $? == 0  ]];then
+        alias $1="$2"
+    fi
+}
+
+make_dir()
+{
+    if [[  ! -d $1  ]];then
+        mkdir $1
     fi
 }

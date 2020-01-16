@@ -3,6 +3,7 @@
 
 config()
 {
+    alias_cmd em 'emacs -nw'
     return
 }
 

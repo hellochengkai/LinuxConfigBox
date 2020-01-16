@@ -3,7 +3,7 @@
 
 install()
 {
-    which fzf
+    which fzf > /dev/null
     if [[  $? == 0  ]];then
         return
     fi

@@ -3,16 +3,14 @@
 
 config()
 {
-    which nvim
+    which nvim > /dev/null
     if [[  $? == 0  ]];then
-        alias vim='nvim'
+        alias_cmd vim 'nvim'
         return
     fi
 
-    if [[  ! -d $HOME/.SpaceVim.d/  ]];then
-        mkdir $HOME/.SpaceVim.d/
-    fi
-    cp SpaceVim.d/init.toml $HOME/.SpaceVim.d/
+    make_dir $HOME/.SpaceVim.d/
+    copy_file SpaceVim.d/init.toml $HOME/.SpaceVim.d/
     return
 }
 

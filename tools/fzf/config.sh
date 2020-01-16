@@ -3,14 +3,14 @@
 config()
 {
     if [[  $SHELL == "/bin/bash"  ]];then
-        [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+        run_shell ~/.fzf.bash
     fi
 
     if [[  $SHELL == "/bin/zsh"  ]];then
-        [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+        run_shell ~/.fzf.zsh
     fi
 
-    alias fzf='fzf --height 40%'
+    alias_cmd fzf 'fzf --height 40%'
     return
 }
 

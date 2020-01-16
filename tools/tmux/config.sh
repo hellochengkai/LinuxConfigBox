@@ -3,7 +3,7 @@
 
 config()
 {
-    alias tmux='tmux -f $LinuxConfigBoxPath/tools/tmux/tmux.conf'
+    alias_cmd tmux 'tmux -f $LinuxConfigBoxPath/tools/tmux/tmux.conf'
     return
 }
 

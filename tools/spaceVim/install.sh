@@ -13,7 +13,7 @@ install()
 
     curl -sLf https://spacevim.org/cn/install.sh > /tmp/spaceVim_install.sh
     chmod +x /tmp/spaceVim_install.sh
-    which nvim
+    which nvim > /dev/null
     if [[  $? == 0  ]];then
         cd /tmp/
         ./spaceVim_install.sh --uninstall vim
@@ -21,7 +21,7 @@ install()
         cd -
         return
     fi
-    which vim
+    which vim > /dev/null
     if [[  $? == 0  ]];then
         cd /tmp/
         ./spaceVim_install.sh --uninstall neovim

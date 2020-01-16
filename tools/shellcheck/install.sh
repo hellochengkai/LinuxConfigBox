@@ -6,7 +6,7 @@ install()
     # URL=https://storage.googleapis.com/shellcheck/shellcheck-stable.linux.x86_64.tar.xz
     # FILE=`basename $URL`
 
-    # which shellcheck
+    # which shellcheck > /dev/null
     # if [[  $? == 0  ]];then
     #     return
     # fi
