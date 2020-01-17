@@ -8,7 +8,7 @@ install()
         tig)
 
     for i in ${cmd_list[@]}; do
-        install_cmd $i
+        sudo_install_cmd $i
     done
 
     copy_file $PWD/gitconfig $HOME/.gitconfig

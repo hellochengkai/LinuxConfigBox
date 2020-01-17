@@ -5,6 +5,8 @@ install()
 {
     # 可以加入想要安装的软件
     cmd_list=(
+        git
+        python-pip
         htop
         tree
         minicom
@@ -17,7 +19,7 @@ install()
         clang)
 
     for i in ${cmd_list[@]}; do
-        install_cmd $i
+        sudo_install_cmd $i
     done
     return
 }

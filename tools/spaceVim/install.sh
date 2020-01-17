@@ -12,7 +12,7 @@ install()
         )
 
     for i in ${cmd_list[@]}; do
-        install_cmd $i
+        sudo_install_cmd $i
     done
 
     curl -sLf https://spacevim.org/cn/install.sh > /tmp/spaceVim_install.sh

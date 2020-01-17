@@ -12,7 +12,6 @@ write_line()
 
 copy_file()
 {
-    cp $1 $2
     if [[  ! -e $2  ]];then
         cp $1 $2
     fi
@@ -56,10 +55,16 @@ make_dir()
         mkdir -p $1
     fi
 }
-
+wget_file()
+{
+    file_name=basename $2
+    if [[  ! -f "$1/$file_name" ]] ; then
+        wget -p $1 $2
+    fi
+}
 #----sudo func-------------------
 
-install_cmd()
+sudo_install_cmd()
 {
     which $1 > /dev/null
     if [[  $? != 0  ]];then
@@ -77,7 +82,6 @@ sudo_write_line()
 
 sudo_copy_file()
 {
-    cp $1 $2
     if [[  ! -e $2  ]];then
         sudo cp $1 $2
     fi
@@ -88,4 +92,8 @@ sudo_make_dir()
     if [[  ! -d $1  ]];then
         sudo mkdir -p $1
     fi
+}
+
+sudo_do_cmd(){
+    sudo $1
 }

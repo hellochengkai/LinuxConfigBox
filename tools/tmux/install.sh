@@ -3,7 +3,7 @@
 
 install()
 {
-    install_cmd tmux
+    sudo_install_cmd tmux
     return
 }
 
