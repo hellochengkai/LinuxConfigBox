@@ -8,7 +8,13 @@ install()
         htop
         tree
         minicom
-        zsh)
+        zsh
+        neofetch
+        wget
+        curl
+        ctags
+        cscope
+        clang)
 
     for i in ${cmd_list[@]}; do
         install_cmd $i
