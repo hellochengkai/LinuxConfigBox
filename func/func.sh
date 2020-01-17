@@ -64,8 +64,14 @@ wget_file()
 }
 #----sudo func-------------------
 
+can_sudo=1
+
 sudo_install_cmd()
 {
+    if [[  $can_sudo == 0  ]];then
+        echo "can't sudo sudo_install_cmd"
+        return
+    fi
     which $1 > /dev/null
     if [[  $? != 0  ]];then
         sudo apt-get install $1
@@ -74,6 +80,10 @@ sudo_install_cmd()
 
 sudo_write_line()
 {
+    if [[  $can_sudo == 0  ]];then
+        echo "can't sudo sudo_write_line"
+        return
+    fi
     grep "$1" $2 > /dev/null
     if [[ $? == 1 ]];then
         sudo sed -i '$a\'"$1" $2
@@ -82,6 +92,11 @@ sudo_write_line()
 
 sudo_copy_file()
 {
+    if [[  $can_sudo == 0  ]];then
+        echo "can't sudo sudo_copy_file"
+        return
+    fi
+
     if [[  ! -e $2  ]];then
         sudo cp $1 $2
     fi
@@ -89,11 +104,19 @@ sudo_copy_file()
 
 sudo_make_dir()
 {
+    if [[  $can_sudo == 0  ]];then
+        echo "can't sudo sudo_make_dir"
+        return
+    fi
     if [[  ! -d $1  ]];then
         sudo mkdir -p $1
     fi
 }
 
 sudo_do_cmd(){
+    if [[  $can_sudo == 0  ]];then
+        echo "can't sudo sudo_do_cmd"
+        return
+    fi
     sudo $1
 }
