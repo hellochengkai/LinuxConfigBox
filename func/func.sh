@@ -53,7 +53,7 @@ alias_cmd()
 make_dir()
 {
     if [[  ! -d $1  ]];then
-        mkdir $1
+        mkdir -p $1
     fi
 }
 
@@ -72,5 +72,20 @@ sudo_write_line()
     grep "$1" $2 > /dev/null
     if [[ $? == 1 ]];then
         sudo sed -i '$a\'"$1" $2
+    fi
+}
+
+sudo_copy_file()
+{
+    cp $1 $2
+    if [[  ! -e $2  ]];then
+        sudo cp $1 $2
+    fi
+}
+
+sudo_make_dir()
+{
+    if [[  ! -d $1  ]];then
+        sudo mkdir -p $1
     fi
 }
