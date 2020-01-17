@@ -2,10 +2,11 @@
 
 write_line()
 {
-    grep "$1" $2
+    grep "$1" $2 > /dev/null
     if [[ $? == 1 ]];then
-        echo >> $2
-        echo $1 >> $2
+        # echo >> $2
+        # echo $1 >> $2
+        sed -i '$a\'"$1" $2
     fi
 }
 
@@ -14,14 +15,6 @@ copy_file()
     cp $1 $2
     if [[  ! -e $2  ]];then
         cp $1 $2
-    fi
-}
-
-install_cmd()
-{
-    which $1 > /dev/null
-    if [[  $? != 0  ]];then
-        sudo apt-get install $1
     fi
 }
 
@@ -61,5 +54,23 @@ make_dir()
 {
     if [[  ! -d $1  ]];then
         mkdir $1
+    fi
+}
+
+#----sudo func-------------------
+
+install_cmd()
+{
+    which $1 > /dev/null
+    if [[  $? != 0  ]];then
+        sudo apt-get install $1
+    fi
+}
+
+sudo_write_line()
+{
+    grep "$1" $2 > /dev/null
+    if [[ $? == 1 ]];then
+        sudo sed -i '$a\'"$1" $2
     fi
 }
