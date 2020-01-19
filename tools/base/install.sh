@@ -16,7 +16,8 @@ install()
         curl
         ctags
         cscope
-        clang)
+        clang
+        cmake)
 
     for i in ${cmd_list[@]}; do
         sudo_install_cmd $i

@@ -13,7 +13,14 @@ write_config(){
     return
 }
 
+
+close_deep()
+{
+    write_line "#close deep" $HOME/.profile
+    write_line "xset -b " $HOME/.profile
+}
 export LinuxConfigBoxPath="$PWD"
+close_deep
 write_config bash
 write_config zsh
 
