@@ -17,3 +17,20 @@
 3. 对终端显示的配置
 4. 配置alias
 5. 可以快速配置环境变量
+
+
+Tools目录结构
+```
+.
+├── Android
+│   ├── android-ndk-r14b
+│   ├── android-sdk-linux
+│   └── android-studio
+├── Gradle
+│   └── gradle-6.1
+├── IDEA
+│   ├── idea-IC-193.5662.53
+│   └── pycharm-community-2019.3.1
+└── JDK
+    └── jdk1.8.0_241
+```
