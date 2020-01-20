@@ -27,5 +27,5 @@ set_alias
 
 set_ipaddr $ifdev
 
-make_dir "$HOME/bin"
-export PATH=$HOME/bin:$PATH
+make_dir "$HOME/Tools/bin"
+export PATH=$HOME/Tools/bin:$PATH
