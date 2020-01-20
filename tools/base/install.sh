@@ -17,7 +17,8 @@ install()
         ctags
         cscope
         clang
-        cmake)
+        cmake
+        mplayer)
 
     for i in ${cmd_list[@]}; do
         sudo_install_cmd $i

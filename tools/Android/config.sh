@@ -9,7 +9,7 @@ config()
     export SDK_HOME=$ANDROID_HOME/android-sdk-linux/
     export AS_HOME=$ANDROID_HOME/android-studio/
 
-    add_path $NDK_HOME/bin
+    add_path $NDK_HOME/
     add_path $SDK_HOME/platform-tools
     add_path $AS_HOME/bin
     return
