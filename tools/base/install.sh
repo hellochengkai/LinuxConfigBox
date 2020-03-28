@@ -6,6 +6,7 @@ install()
     # 可以加入想要安装的软件
     cmd_list=(
         git
+        subversion
         python-pip
         htop
         tree
