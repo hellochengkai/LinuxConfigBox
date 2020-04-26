@@ -9,7 +9,7 @@ config()
     #for jdk
     export JAVA_HOME=$HOME/Tools/JDK/jdk1.8.0_241
     export JRE_HOME=${JAVA_HOME}/jre
-    export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:$CLASSPATH
+    # export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:$CLASSPATH
     add_path $JAVA_PATH/bin
     add_path ${JRE_HOME}/bin
     return

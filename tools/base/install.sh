@@ -19,7 +19,9 @@ install()
         cscope
         clang
         cmake
-        mplayer)
+        mplayer
+        com.oray.sunlogin.client
+        cn.teamviewer.teamviewer)
 
     for i in ${cmd_list[@]}; do
         sudo_install_cmd $i
