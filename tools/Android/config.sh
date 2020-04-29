@@ -3,11 +3,11 @@
 
 config()
 {
-    export ANDROID_HOME=$HOME/Tools/Android/
+    ANDROID_PATH=$HOME/Tools/Android/
 
-    export NDK_HOME=$ANDROID_HOME/android-ndk-r14b/
-    export SDK_HOME=$ANDROID_HOME/android-sdk-linux/
-    export AS_HOME=$ANDROID_HOME/android-studio/
+    export NDK_HOME=${ANDROID_PATH}/android-ndk-r14b/
+    export SDK_HOME=${ANDROID_PATH}/android-sdk-linux/
+    export AS_HOME=${ANDROID_PATH}/android-studio/
 
     add_path $NDK_HOME/
     add_path $SDK_HOME/platform-tools
