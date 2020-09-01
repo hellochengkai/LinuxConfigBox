@@ -5,6 +5,7 @@ install()
 {
     # 可以加入想要安装的软件
     cmd_list=(
+        trash-cli
         git
         subversion
         python-pip

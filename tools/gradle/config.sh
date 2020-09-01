@@ -3,8 +3,9 @@
 
 config()
 {
-    export GRADLE_USER_HOME=$HOME/Tools/Gradle/gradle-6.1
-    add_path $GRADLE_USER_HOME/bin
+    # export GRADLE_USER_HOME=$HOME/Tools/Gradle/gradle-6.1
+    # add_path $GRADLE_USER_HOME/bin
+    add_path $HOME/Tools/Gradle/gradle-6.1/bin
     return
 }
 

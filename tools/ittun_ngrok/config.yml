@@ -1,6 +1,6 @@
-server_addr: "ittun.com:44433"
+server_addr: "tcp.ittun.com:36415"
 tunnels:
     ssh:
-       remote_port: 51012
-       proto:
+    remote_port: 51012
+    proto:
         tcp: "127.0.0.1:22"
