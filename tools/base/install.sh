@@ -21,6 +21,8 @@ install()
         clang
         cmake
         mplayer
+        nginx
+        ranger
         com.oray.sunlogin.client
         cn.teamviewer.teamviewer)
 
