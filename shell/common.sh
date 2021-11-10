@@ -16,6 +16,7 @@ set_alias()
     alias_cmd 'reboot_X' 'reboot'
     alias_cmd 'cdb' 'cd ../'
     alias_cmd 'em' 'emacs -nw'
+    alias_cmd 'adb' 'adb -P 5078'
 }
 
 set_ipaddr()
