@@ -69,7 +69,7 @@ can_sudo=1
 sudo_install_cmd()
 {
     if [[  $can_sudo == 0  ]];then
-        echo "can't sudo sudo_install_cmd"
+        echo "can't sudo sudo_install_cmd $1"
         return
     fi
     which $1 > /dev/null
@@ -119,4 +119,15 @@ sudo_do_cmd(){
         return
     fi
     sudo $1
+}
+unpack_ramdisk()
+{
+    ramdisk=$1
+    out=$2
+    mkdir $out -p
+    cp $ramdisk $out/ramdisk.cpio.gz
+    cd $out/
+    gzip -d ramdisk.cpio.gz
+    cpio -i -F ramdisk.cpio
+    cd -
 }
